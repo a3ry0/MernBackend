@@ -1,0 +1,94 @@
+### CREATE five documents.
+POST http://localhost:3000/sales HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "JNCO Jeans",
+    "date_bought": "2023-11-28",
+    "date_sold": "2024-01-14",
+    "price_bought_for": 5.50,
+    "price_sold_for": 325.00
+}
+
+
+### CREATE 2
+POST http://localhost:3000/sales HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "Birkenstock Bostons",
+    "date_bought": "2021-05-02",
+    "date_sold": "2024-10-10",
+    "price_bought_for": 60.80,
+    "price_sold_for": 100.40
+}
+
+### CREATE 3
+POST http://localhost:3000/sales HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "Wii Console",
+    "date_bought": "2024-11-05",
+    "date_sold": "2024-11-23",
+    "price_bought_for": 52.90,
+    "price_sold_for": 125.00
+}
+
+### CREATE 4
+POST http://localhost:3000/sales HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "Oakley Sunglasses",
+    "date_bought": "2018-07-16",
+    "date_sold": "2022-12-29",
+    "price_bought_for": 20.00,
+    "price_sold_for": 200.00
+}
+
+### CREATE 5
+POST http://localhost:3000/sales HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "Signed Band Poster",
+    "date_bought": "1999-09-23",
+    "date_sold": "2024-01-04",
+    "price_bought_for": 1.00,
+    "price_sold_for": 999.00
+}
+
+
+### RETRIEVE all documents.
+GET http://localhost:3000/sales HTTP/1.1
+
+
+
+### RETRIEVE a document by its ID.
+### Replace the following ID with one that exists in the collection.
+GET http://localhost:3000/sales/67425f65cc92beb692e1dc7a HTTP/1.1
+
+
+### UPDATE one document's year, by ID.
+### Replace the ID in the following request with one that exists
+### and update the year:
+PUT http://localhost:3000/sales/67425f8bcc92beb692e1dc7c HTTP/1.1
+content-type: application/json
+
+{
+    "product_name": "JNCO Jeans",
+    "date_bought": "2023-11-28",
+    "date_sold": "2024-01-24",
+    "price_bought_for": 5.50,
+    "price_sold_for": 360.00
+}
+
+### DELETE by ID (responds with nothing if successful):
+DELETE http://localhost:3000/sales/67425fd9cc92beb692e1dc89 HTTP/1.1
+
+
+
+### RETRIEVE all documents (responds with 4 or the original 5):
+GET http://localhost:3000/sales HTTP/1.1
+
